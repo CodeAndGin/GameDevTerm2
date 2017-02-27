@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class beep : MonoBehaviour {
+public class scan: MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class push : MonoBehaviour {
-	
+	public GameObject productManager;
+	public float pushingSpeed;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,10 +14,12 @@ public class push : MonoBehaviour {
 	void Update () {
 		
 	}
-	void OnCollisionEnter(Collision collision) {
-		foreach (ContactPoint contact in collision.contacts) {
-//			Debug.DrawRay(contact.point, contact.normal, Color.white);
-//			Debug.Log (collision.collider.name);
+	void OnTriggerStay(Collider col) {
+		if( productManager.GetComponent<productManagement>().pushProd ){
+			Vector3 velocity = col.GetComponent<Rigidbody> ().velocity;
+
+			col.GetComponent<Rigidbody> ().velocity = new Vector3 (-pushingSpeed, velocity.y, velocity.z);
+			
 		}
 	}
 //	IEnumerator Conveyor(){

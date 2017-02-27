@@ -50,11 +50,12 @@
      <Compile Include="Assets\Scripts\Gizmos\drawBoxMagenta.cs" />
      <Compile Include="Assets\Scripts\Gizmos\drawEmptysYellow.cs" />
      <Compile Include="Assets\Scripts\Gizmos\drawSphereGreen.cs" />
-     <Compile Include="Assets\Scripts\fixObject.cs" />
+     <Compile Include="Assets\Scripts\barcode.cs" />
+     <Compile Include="Assets\Scripts\beltStopper.cs" />
+     <Compile Include="Assets\Scripts\fixAndRotate.cs" />
      <Compile Include="Assets\Scripts\pickUp.cs" />
      <Compile Include="Assets\Scripts\productManagement.cs" />
      <Compile Include="Assets\Scripts\push.cs" />
-     <Compile Include="Assets\Scripts\rotateObject.cs" />
      <Compile Include="Assets\Scripts\scan.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
