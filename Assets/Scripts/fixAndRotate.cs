@@ -27,7 +27,8 @@ public class fixAndRotate: MonoBehaviour {
 			if (Input.GetButton ("Fire1")) {
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 				RaycastHit hit;
-				if (Physics.Raycast (ray, out hit, 100)) {
+				int layerMask = 1 << 10;
+				if (Physics.Raycast (ray, out hit, 100,layerMask)) {
 					if (hit.collider.name == "Rotator") {
 						product.Rotate(new Vector3(Input.GetAxis("Mouse Y"), -Input.GetAxis("Mouse X"), 0f) * Time.deltaTime * speed, Space.World); //
 					}

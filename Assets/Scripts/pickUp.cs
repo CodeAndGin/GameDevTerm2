@@ -61,13 +61,20 @@ public class pickUp : MonoBehaviour {
 	IEnumerator Translation(){
 		for(;;){
 			Vector3 point1 = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-						
+			Debug.DrawLine (point1, point, Color.red, 20f);
 //						point = new Vector3 (point.x, point.y - 17f, product.position.z);
 //						Vector3 translation = point - product.position;
 //			Vector3 translation = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0f);
-			Vector3 translation = point1 - point;
+			Vector3 translation = point1-point;
+//			Vector3 translation = point1;
+			translation.z = 0f;
+//			translation.y -= 17f;
+//			Vector3 dir = product.position - point1
+				
+//			Debug.Log (translation);
 	//		Debug.Log (Input.GetAxis ("Mouse X"));
-			product.GetComponent<Rigidbody> ().velocity = translation * Time.deltaTime * 3700f;// * 30f;
+			product.GetComponent<Rigidbody> ().velocity = translation * 50f;// * Time.deltaTime * 30f;// * 30f;
+//			product.position = new Vector3(product.position.x + translation.x, product.position.y + translation.y, product.position.z);
 
 			point = point1;
 			yield return null;
