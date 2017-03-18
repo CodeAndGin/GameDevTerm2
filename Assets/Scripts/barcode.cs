@@ -20,7 +20,7 @@ public class barcode : MonoBehaviour {
         int layerMask = 1 << 9;
         if (Physics.Raycast(transform.position, forward, out hit, 1, layerMask) ) {
             if(hit.collider.name == "Scaner")
-            	// Debug.Log("hit");
+            	//Debug.Log("hit");
             scanner.SendMessage("Scanned");
         }
 	}

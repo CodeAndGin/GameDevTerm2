@@ -1,19 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿//using System.Collections;
+//using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Cusomer {
+public class faceImages{
+	public GameObject happy;
+	public GameObject neutral;
+	public GameObject sad;
+	public GameObject angry;
+	public GameObject furious;
+}
+
+[System.Serializable]
+public class Customer {
 
 	public GameObject obj;
-	public int mostSuitableAge;
+
 	public int difficulty;
-	public int probability;
+	public int age;
 
 }
 
 public class customerManagement : MonoBehaviour {
 
-	public Cusomer[] cusomers;
+	public faceImages face;
+	public Customer[] customers;
 
 }

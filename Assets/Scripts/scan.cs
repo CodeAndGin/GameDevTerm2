@@ -14,7 +14,8 @@ public class scan: MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter(Collider other) {
+	void Scanned () {
 		GetComponent<AudioSource>().Play();
+		//inc score
 	}
 }
