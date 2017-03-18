@@ -2,6 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class Product {
+
+	public GameObject obj;//{ get; set; }
+//	public bool ageRestricted;//{ get; set; } //Ideas for the future
+	public int mostSuitableAge;//{ get; set; }
+	public int difficulty;//{ get; set; }
+	public int probability;//{ get; set; }
+
+//	public Product(GameObject Obj, int[] AgeRange, int MostSuitableAge, int Difficulty, int Probability){
+//
+//		obj = Obj;
+//		ageRange = AgeRange;
+//		mostSuitableAge = MostSuitableAge;
+//		difficulty = Difficulty;
+//		probability = Probability;
+//	
+//	}
+
+
+
+
+
+}
+
 
 /*Instantiates new products and translates them closer to a til point*/
 public class productManagement : MonoBehaviour {
@@ -9,11 +34,15 @@ public class productManagement : MonoBehaviour {
 //	public float speed = 100.0f;
 //	int counter = 0;
 
-	public GameObject product;
-	public Transform newProdPos;
+
+//	public GameObject[] obj;
+	public Transform spawningPoint;
+
+	public Product[] products;
 	// Use this for initialization
 	void Start () {
 //		StartCoroutine ("Instance");
+
 	}
 	
 	// Update is called once per frame
